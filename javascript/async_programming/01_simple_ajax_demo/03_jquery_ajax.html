@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<script>
+
+    $.ajax({
+        type: 'GET',
+        url: 'data_class.json',
+        // A callback function to run if the request succeeds. Optional. The function receives the response data (converted to a JavaScript object if the data type was JSON), as well as the text status of the request and the raw request object.
+        success: function (data) {
+            // $.each(data,function (index,item){
+            //     console.log(index +' : '+item)
+            // })
+            let $div = $('<div>').attr({
+                id: '#div_1'
+            })
+            // $div.html(JSON.stringify(data))
+            $div.html(data['name'])
+
+            $div.appendTo(document.body)
+
+        }
+    })
+
+
+</script>
+<body>
+
+</body>
+</html>

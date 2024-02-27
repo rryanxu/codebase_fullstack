@@ -1,0 +1,11 @@
+{
+  "name": "codebase_fullstack",
+  "version": "1.0.0",
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "axios": "^1.6.2",
+    "jquery": "^3.7.1",
+    "redis": "^4.3.1",
+    "ws": "^8.15.1"
+  }
+}

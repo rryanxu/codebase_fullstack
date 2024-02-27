@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- development version, includes helpful console warnings -->
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+</head>
+
+
+<body>
+
+<form>
+    <label for="quote-choose">Choose a quote</label><br>
+    <select id="quote-choose" name="quote-choose">
+        <option>Verse 1</option>
+        <option>Verse 2</option>
+        <option>Verse 3</option>
+        <option>Verse 4</option>
+    </select>
+</form>
+
+<pre>
+
+</pre>
+
+
+<script>
+    var verseChoose = document.querySelector('select');
+    var poemDisplay = document.querySelector('pre');
+
+    verseChoose.onchange = function () {
+        var verse = verseChoose.value;
+        updateDisplay(verse);
+    };
+
+    function updateDisplay(verse) {
+        verse = verse.replace(" ", "");
+        verse = verse.toLowerCase();
+        var url = verse + '.txt';
+
+        fetch(url).then(function (response) {
+            response.text().then(function (text) {
+                poemDisplay.textContent = text
+            })
+        })
+    }
+
+    updateDisplay('Verse 1');
+    verseChoose.value = 'Verse 1';
+
+
+</script>
+
+</body>
+</html>
+

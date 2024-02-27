@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--type="text/babel" is not required here-->
+<!--<script type="text/babel">-->
+<script>
+
+  axios.get('https://jsonplaceholder.typicode.com/todos/error/1')
+       .then(resolve => {
+         console.log(JSON.stringify(resolve));
+       })
+       .catch(reject => {
+         console.log(reject);
+       });
+
+</script>
+
+</body>
+</html>

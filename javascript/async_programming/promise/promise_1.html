@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    let p = new Promise((resolve, reject) => {
+        fetch('http://127.0.0.1:8000/fetch-server', {
+            method: 'GET',
+            // body: 'username=admin&password=admin'
+        }).then(response => {
+            if (response.status === 200) {
+                response.json().then(data=>{
+                    console.log(data)
+                })
+                resolve('Success')
+            }
+
+        }).then(error => {
+            reject('Failed')
+        })
+
+    })
+
+
+    p.then((message) => {
+        console.log('This is in the then ' + message)
+    }).catch((message) => {
+        console.log('This is in the catch ' + message)
+    })
+
+</script>
+
+</body>
+</html>

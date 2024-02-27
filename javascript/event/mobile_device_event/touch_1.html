@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!--hammer.js simulate touch device-->
+<script>
+  document.addEventListener('touchstart',f)
+
+  function f(ev){
+      console.log(ev.touches,ev.type)
+  }
+</script>
+
+</body>
+</html>

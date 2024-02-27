@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #root {
+            /*width: 80vw;*/
+            background-color: orange;
+            height: 50vh;
+            /*margin-left: 10%;*/
+        }
+    </style>
+</head>
+<body>
+
+<div id="root">
+
+</div>
+
+<script>
+    document.getElementById('root').addEventListener('click',function (e){
+        console.log(window.innerWidth)
+
+        // console.log(screen.width)
+        // console.log(window.screen.availWidth)
+        console.log(e.screenX)
+        // console.log(e.screenY)
+
+        if(e.screenX/window.innerWidth>0.9){
+            console.log('right')
+        }
+
+        if(e.screenX/window.innerWidth<0.1){
+            console.log('left')
+        }
+    })
+</script>
+
+</body>
+</html>

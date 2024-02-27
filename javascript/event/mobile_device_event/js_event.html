@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('touchmove',function (){
+            // alert(window.location.href)
+            window.location.href = '0002-add-two-numbers.html'
+        })
+    </script>
+
+    <script>
+        $(document).keydown(function (e){
+            if(e.keyCode===39 || e.keyCode===37){
+                window.location.href = '0002-add-two-numbers.html'
+            }
+        })
+    </script>
+</head>
+<body>
+
+<p>hello index</p>
+<p style="visibility: hidden">swipe event fired</p>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script src="04_settled_with_then.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+    const p = new Promise((resolve, reject) => {
+        reject('Failed')
+        resolve('Success')
+    });
+
+    console.log(p);
+
+    p.then(value => {
+        console.log(value);
+    }, reject => {
+        console.warn(reject);
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+<body>
+
+
+<script>
+  // https://stackoverflow.com/questions/9072385/how-to-test-if-a-javascript-cookie-has-expired
+
+  cookie_str = '_gid=GA1.2.409757423.1702087933; _gat=1; gr_user_id=cb020580-e33e-43ee-a460-aa9ec69523ad; 87b5a3c3f1a55520_gr_session_id=97e8e4c9-dec9-4fd9-80fb-c9c75c5b322d; 87b5a3c3f1a55520_gr_session_id_sent_vst=97e8e4c9-dec9-4fd9-80fb-c9c75c5b322d; _dd_s=rum=0&expire=1702088839958; csrftoken=x4SsGn4DIPszEPEcldBS4tDhRA8F2WOpLFrqx8q0FB7hrdCxAgkvCMtZdAOv8GYl; messages=W1siX19qc29uX21lc3NhZ2UiLDAsMjUsIlN1Y2Nlc3NmdWxseSBzaWduZWQgaW4gYXMgbWFib3lheWFsZS4iXV0:1rBmpI:ghaFCg5NGtEV7P_QHUCpcYWkuAjXDIs_jWSbJu0fz74; LEETCODE_SESSION=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfYXV0aF91c2VyX2lkIjoiODA4NjU2NiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzAwZDFlYmFkMjA1M2I3NjIwNzEzNzM4N2YxNjMwZTE2MjExMTU3YzY2ZGJhMWZhM2YxNzA5MmI3NmI4ZTMyOCIsImlkIjo4MDg2NTY2LCJlbWFpbCI6Im5pYW5mZWl4bWJAMTYzLmNvbSIsInVzZXJuYW1lIjoibWFib3lheWFsZSIsInVzZXJfc2x1ZyI6Im1hYm95YXlhbGUiLCJhdmF0YXIiOiJodHRwczovL3MzLXVzLXdlc3QtMS5hbWF6b25hd3MuY29tL3MzLWxjLXVwbG9hZC9hc3NldHMvZGVmYXVsdF9hdmF0YXIuanBnIiwicmVmcmVzaGVkX2F0IjoxNzAyMDg3OTQwLCJpcCI6IjE3Mi41OC4xMjAuMTA0IiwiaWRlbnRpdHkiOiI0YmU1MDc1ODI0ZGZjOWViZmNlYTk2MmYzMTg4MDk3YyIsInNlc3Npb25faWQiOjUxMzI2MjM2LCJfc2Vzc2lvbl9leHBpcnkiOjEyMDk2MDB9.WOLpxJ0mmFtfYaHGiJqe5EjHPL1S4uOevFJ74XXdQPE; _ga=GA1.1.487743670.1702087933; __stripe_mid=4e81f7e5-8441-42c1-8af9-bf3fd030faed1d23a2; __stripe_sid=b741fd25-f12e-4446-a212-c0f8163fa1ac90f35c; _ga_CDRWKZTDEX=GS1.1.1702087933.1.1.1702087952.41.0.0';
+
+  // TODO: check if cookie expired
+  // the following code is not working
+  if ($.cookie('cookie_str') === null) {
+    console.log('cookie expired');
+  } else {
+    console.log('cookie does not expired');
+  }
+
+
+</script>
+</body>
+</html>
